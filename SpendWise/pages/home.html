@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Planner - Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SpendWise
+                <p style="font-size: 0.5em; font-style: italic; margin: 0;">Plan Smarter. Save More.</p>
+            </div>           
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="hero">
+        <div class="hero-content fade-in">
+            <h1>Plan It. Track It. Crush It.</h1>
+            <p>All your money — income, expenses, and savings — in one simple dashboard.</p>
+            <p>Visualize where your cash goes, set savings targets, and hit your financial milestones faster.</p>
+            <br><br>
+            <div class="hero-paragraph">
+                <p class="animated-paragraph">Budgeting has never been this easy; YES, this fun!</p>
+            </div>
+                           
+
+
+            <button class="btn" onclick="location.href='transactions.html'">Get Started</button>
+            <p><em><p>Hit your money goals faster than ever before.</p></em></p>
+        </div>
+        
+        <div class="summary-cards"> 
+            <div>Income: Ksh 0</div> 
+            <div>Expenses: Ksh 0</div> 
+            <div>Savings: Ksh 0</div> 
+        </div>
+
+        <div class="chart-placeholder">
+            <h2>Expense Breakdown</h2>
+            <canvas id="home-expense-pie" width="600" height="300"></canvas>
+        </div>
+
+        <div class="progress-placeholder">
+            <h2>Savings Goal Progress</h2>
+            <!-- Goal input -->
+            <input type="number" id="savings-goal-input" placeholder="Enter your savings goal (Default Ksh.1000, 000)" />
+            <button id="set-goal-btn">Set Goal</button>
+            <br><br>         
+            <p id="savings-text">Ksh 0 / Ksh 0</p>
+            <div style="background:#ddd; width:100%; height:20px; border-radius:10px; overflow:hidden;">
+                <div id="savings-progress" style="background:#4CAF50; width:0; height:100%;"></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright &copy; 2025 SpendWise. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/home.js"></script>
+</body>
+</html>
